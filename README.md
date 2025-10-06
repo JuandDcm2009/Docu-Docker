@@ -127,6 +127,10 @@ Juan Diego Cristancho Maldonado
 
 - ``SELECT `` se le pueden aplicar los metodos de ``LIMIT, WHERE, ORDER BY...``
 
+- `LIKE 'texto%'` filtrar palabras. el % al final filtra de derecha a izquierda y el % al principio de izquierda a derecha.
+
+- `match(atributo, atributo..) against(texto)` Filtrar si dos atributos hacen match.
+
 - **Simbolos de comparacion**
   **"=" ** :   Indica igualdad
 
@@ -186,3 +190,7 @@ Juan Diego Cristancho Maldonado
 
 - ``SELECT (atributo), (atributo)... FROM (nombre_Tabla) INNER JOIN (otra_tabla) ON `` Agrupar los datos de una tabla. Se puede usar ``LEFT, INNER, RIGHT``.
 
+#### Indices
+
+- `CREATE INDEX (nombre_indice) on tabla(columnas);` Crear indice para una columna.
+- `ALTER TABLE (tabla) ADD FULLTEXT(columna, columna...)` Añadir full text a las columnas;
